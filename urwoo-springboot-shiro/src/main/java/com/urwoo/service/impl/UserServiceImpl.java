@@ -37,6 +37,7 @@ public class UserServiceImpl implements UserService {
         if (checkUserUsernameIsExit(userPo.getUsername())){
             throw new UserUsernameExitException();
         }
+        userPo.setPassword("123");
         return userDao.save(userPo);
     }
 

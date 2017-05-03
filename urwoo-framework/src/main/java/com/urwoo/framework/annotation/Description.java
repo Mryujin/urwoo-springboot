@@ -10,8 +10,8 @@ import java.lang.annotation.*;
 public @interface Description {
 
     @AliasFor(value = "des")
-    String value();
+    String value() default "";
 
     @AliasFor(value = "value")
-    String des();
+    String des() default "";
 }

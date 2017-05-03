@@ -29,8 +29,8 @@ public class UrwooResponses implements ResponseConst{
         Map<String,Object> data = new HashMap<String,Object>();
         data.put("list", records);
         data.put("total", total);
-        data.put("currentPage", currentPage);
-        data.put("pageSize", pageSize);
+        data.put("start", currentPage);
+        data.put("limit", pageSize);
         return success(data);
     }
 
