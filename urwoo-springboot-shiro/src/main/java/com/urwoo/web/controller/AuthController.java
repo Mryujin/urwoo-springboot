@@ -9,13 +9,15 @@ import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 
 @RestController
-public class LoginController extends BaseController{
+@RequestMapping("/auth/")
+public class AuthController extends BaseController{
 
     @PostMapping(path = "/login", produces = {DEFAULT_PRODUCES})
     public UrwooResponse login(@RequestParam(name = "username") String username,

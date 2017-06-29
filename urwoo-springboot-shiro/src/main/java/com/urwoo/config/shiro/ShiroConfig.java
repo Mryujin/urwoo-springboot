@@ -71,6 +71,7 @@ public class ShiroConfig {
 //        filterChainDefinitionMap.put("/user/grant/**", "perms[system:user:grant]");
 
         filterChainDefinitionMap.put("/**", "authc");
+        filterChainDefinitionMap.put("/auth/**", "anon");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         shiroFilterFactoryBean.setLoginUrl("/login");
